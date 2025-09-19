@@ -1,0 +1,84 @@
+README FILE OF MY PROJECT
+
+ AlphaStaff Management System
+
+AStaff Record Management System built using PHP (OOP + MySQLi)and MySQL.  
+The system allows users to Create, Read, Update, and Delete staff records via a web interface with basic styling
+
+ Features
+
+- Add new staff members with details:
+  - First Name
+  - Last Name
+  - Email
+  - Phone
+  - Position
+  - Salary
+  - Date Hired
+  - View all staff records in a table
+  - Edit staff records
+  - Delete staff records with confirmation
+  - HTML/CSS interface
+  - Uses OOP principles for PHP
+  - Uses MySQLi with prepared statements for security like private
+  - Proper error handling and database connection closure
+
+  Technologies Used
+
+- PHP
+- MySQL
+- MySQLi (Object-Oriented)
+- HTML & CSS
+- XAMPP 
+
+
+Project Structure
+
+
+
+staff_app
+
+ db.php 
+ Staff.php 
+ index.php  Display staff records (Read)
+ create.php  Add new staff (Create)
+ update.php  Edit existing staff (Update)
+ delete.php  Delete staff (Delete)
+ style.css   CSS styling
+
+
+
+   CREATE TABLE staff (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       first_name VARCHAR(50) NOT NULL,
+       last_name VARCHAR(50) NOT NULL,
+       email VARCHAR(100) UNIQUE,
+       phone VARCHAR(20),
+       position VARCHAR(50),
+       salary DECIMAL(10,2),
+       date_hired DATE
+   );
+
+
+
+Usage
+
+Click “Add New Staff” to insert a new record.
+
+Use Edit button to update an existing staff record.
+
+Use Delete button to remove a staff record.
+
+View all staff records on the main page.
+
+
+
+Database credentials in db.php:
+
+private $host = "localhost";
+private $username = "root";
+private $password = "";
+private $database = "organization_db";
+
+Organization: AlphaStaff Management
+
